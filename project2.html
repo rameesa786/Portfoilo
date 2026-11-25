@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-powered Resume Screening and Ranking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global */
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #121212);
+      color: #f0f0f0;
+      font-family: "Poppins", sans-serif;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #00f5c8, #00d9ff, #8be9fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #cfcfcf;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Content Box */
+    .content-box {
+      background: rgba(20, 20, 20, 0.9);
+      padding: 3rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 35px rgba(0, 255, 200, 0.3);
+      max-width: 1000px;
+      margin: auto;
+      text-align: left;
+      backdrop-filter: blur(12px);
+    }
+
+    .content-box p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background: linear-gradient(145deg, #1a1a1a, #0e0e0e);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0, 255, 200, 0.4);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0,255,200,0.15), transparent 70%);
+      transform: rotate(25deg);
+      transition: opacity 0.4s;
+      opacity: 0;
+    }
+
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+    }
+
+    .feature-card h4 {
+      font-size: 1.4rem;
+      color: #00e7d6;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #b6ede9;
+      color: black;
+      border-radius: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: black;
+      color: #b6ede9;
+      box-shadow: 0 0 15px #b6ede9;
+    }
+
+    /* Back Button */
+    .back-btn {
+      margin-top: 3rem;
+      display: inline-block;
+      background: linear-gradient(90deg, #00f5c8, #00d9ff);
+      color: #000;
+      padding: 12px 26px;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: transparent;
+      color: #00f5c8;
+      border: 2px solid #00f5c8;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      h3 { font-size: 1.2rem; }
+      .content-box p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AI-powered Resume Screening & Ranking</h1>
+  <h3>Streamlined Candidate Evaluation with NLP & Machine Learning</h3>
+
+  <div class="content-box">
+    <p>
+      This intelligent system streamlines the hiring process by analyzing resumes using NLP techniques and ranking candidates based on job-fit scores. 
+      It reduces manual screening time and ensures data-driven, unbiased selection.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h4>📄 Resume Parser</h4>
+        <p>Extracts key sections like education, skills, experience, and projects automatically.</p>
+      </div>
+      <div class="feature-card">
+        <h4>⚙️ Skill Matching</h4>
+        <p>Uses TF-IDF & cosine similarity to compare resume content with job description.</p>
+      </div>
+      <div class="feature-card">
+        <h4>📊 Scoring & Ranking</h4>
+        <p>Ranks candidates based on configurable weights for various resume sections.</p>
+      </div>
+      <div class="feature-card">
+        <h4>🚀 Deployment</h4>
+        <p>Deployed using Streamlit, ensuring a smooth and interactive recruiter experience.</p>
+      </div>
+    </div>
+
+    <a href="https://github.com/rameesa786/AI-powered-Resume-Screening-and-Ranking-System" class="btn">📂 View GitHub Repo</a>
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+</body>
+</html>

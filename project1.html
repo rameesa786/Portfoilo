@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReMedIntel – Patient Readmission Prediction</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.8;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                  url("https://images.unsplash.com/photo-1581091226825-1c7c91c2f1f1?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 7rem 2rem 6rem;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      background: linear-gradient(90deg, #00f5c8, #00d9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 850px;
+      margin: auto;
+      color: #ddd;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    /* Card Sections */
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 25px rgba(0, 245, 200, 0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      color: #00d9ff;
+      margin-bottom: 1rem;
+    }
+
+    .card p, .card li {
+      font-size: 1.05rem;
+    }
+
+    ul {
+      margin: 1rem 0 0 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Highlight Stats */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1.5rem;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .stat {
+      background: rgba(0, 245, 200, 0.08);
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #00f5c8;
+      min-width: 160px;
+    }
+
+    /* Buttons */
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      background: linear-gradient(90deg, #00f5c8, #00d9ff);
+      color: #000;
+      padding: 12px 30px;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: #00f5c8;
+      border: 2px solid #00f5c8;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin: 3rem auto 2rem;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      color: #00f5c8;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>ReMedIntel</h1>
+    <p>AI-powered platform predicting patient hospital readmission using <strong>PCA</strong> & hybrid ML models to support smarter healthcare decisions.</p>
+  </section>
+
+  <!-- Content -->
+  <div class="container">
+    
+    <div class="card">
+      <h2>📌 Overview</h2>
+      <p>
+        <strong>ReMedIntel</strong> is a predictive analytics application built with <strong>Streamlit</strong>. 
+        It helps hospitals forecast patient readmissions, reduce healthcare costs, and improve patient outcomes by leveraging dimensionality reduction (PCA) and multiple ML models.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Features</h2>
+      <ul>
+        <li>Predict readmission <strong>by patient name</strong> with personalized insights.</li>
+        <li>Forecast patients likely to be readmitted <strong>within a time window</strong> (e.g., next 5 days).</li>
+        <li>Handles <strong>under observation</strong> & <strong>deceased</strong> cases gracefully.</li>
+        <li>Interactive dashboard for hospital staff with <strong>real-time results</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Technical Highlights</h2>
+      <ul>
+        <li><strong>Preprocessing:</strong> Label encoding, PCA (3D feature reduction).</li>
+        <li><strong>Models:</strong> Logistic Regression, Decision Tree, Deep Learning (Keras).</li>
+        <li><strong>Tools:</strong> Pandas, Scikit-learn, TensorFlow, Joblib, Streamlit.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Results & Impact</h2>
+      <p>
+        By predicting readmissions, the system empowers hospitals to take proactive measures:
+      </p>
+      <ul>
+        <li>Reduce <strong>avoidable readmissions</strong>.</li>
+        <li>Improve <strong>patient care & resource allocation</strong>.</li>
+        <li>Support <strong>data-driven decisions</strong> for healthcare staff.</li>
+      </ul>
+      <div class="stats">
+        <div class="stat">85%+ Model Accuracy</div>
+        <div class="stat">3 Models Benchmarked</div>
+        <div class="stat">Real-time Predictions</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-container">
+    <a href="https://github.com/rameesa786" class="btn">📂 View GitHub Repo</a>
+    <a href="index.html" class="btn">⬅ Back to Portfolio</a>
+  </div>
+
+</body>
+</html>
