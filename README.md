@@ -90,8 +90,6 @@ Malla Reddy Engineering College for Women
 - TechSaksham Internship – AI: Transformative Learning with TechSaksham, Microsoft & SAP
 - CSI Member
 
----
-
 ## 🌱 About Me
 
 I am a Computer Science Engineering graduate specializing in Artificial Intelligence and Machine Learning, passionate about developing intelligent applications, exploring emerging technologies, and solving real-world problems through software and AI.
